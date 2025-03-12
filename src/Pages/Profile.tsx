@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Heart, Star, MessageSquare, Trash2 } from "lucide-react";
 
 const Profile = () => {
-  const [username, setUsername] = useState("Yoga");
+  const [username, setUsername] = useState("Ramya");
   const [profilePic, setProfilePic] = useState("");
   const [savedProfilePic, setSavedProfilePic] = useState("");
   const [watchlist, setWatchlist] = useState<any[]>([]);
@@ -11,7 +11,7 @@ const Profile = () => {
 
   // Load user profile and watchlist data from local storage (Temporary until backend API is ready)
   useEffect(() => {
-    const savedUsername = localStorage.getItem("username") || "Yoga";
+    const savedUsername = localStorage.getItem("username") || "Ramya";
     const savedPic = localStorage.getItem("profilePic") || "";
     const savedWatchlist = JSON.parse(localStorage.getItem("watchlist") || "[]");
     const savedRatedMovies = JSON.parse(localStorage.getItem("ratedMovies") || "[]");
